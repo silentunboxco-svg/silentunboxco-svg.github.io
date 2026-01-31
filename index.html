@@ -3,197 +3,144 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Silent Unbox Co | Minimalist Unboxing</title>
+  <title>Silent Unbox Co. | Women's Fashion & Textures</title>
   <style>
-    /* Modern variables for easy aesthetic changes */
     :root {
-      --bg-color: #0a0a0a;
-      --card-bg: #161616;
-      --accent: #ffffff;
-      --text-muted: #888888;
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --accent: #f8f8f8;
+      --muted: #757575;
     }
 
     body { 
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
-      margin: 0; 
-      padding: 0; 
-      background: var(--bg-color); 
-      color: var(--accent); 
-      line-height: 1.6;
+      font-family: 'optima', sans-serif, 'Helvetica Neue'; 
+      margin: 0; background: var(--bg); color: var(--text); 
+      line-height: 1.8;
     }
-    
-    /* Elegant Modern Header */
+
+    /* Elegant Editorial Header */
     header { 
-      padding: 100px 20px; 
-      text-align: center; 
-      background: linear-gradient(to bottom, #000 0%, var(--bg-color) 100%);
+      padding: 120px 20px 60px; 
+      text-align: center;
+      letter-spacing: 0.2em;
     }
     header h1 { 
-      letter-spacing: 8px; 
+      font-size: 2.8rem; 
+      font-weight: 300; 
       text-transform: uppercase; 
-      margin: 0; 
-      font-size: clamp(1.5rem, 5vw, 3rem); 
-      font-weight: 200;
+      margin: 0;
     }
     header p { 
-      font-size: 0.9rem; 
-      color: var(--text-muted); 
-      letter-spacing: 4px; 
-      text-transform: uppercase;
-      margin-top: 15px;
+      font-size: 0.85rem; 
+      text-transform: uppercase; 
+      color: var(--muted); 
+      margin-top: 20px;
     }
 
-    /* Minimal Floating Nav */
     nav { 
-      position: sticky;
-      top: 0;
-      background: rgba(10, 10, 10, 0.8);
-      backdrop-filter: blur(10px);
-      padding: 20px; 
-      text-align: center; 
-      border-bottom: 1px solid #222;
-      z-index: 1000;
+      position: sticky; top: 0; background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(5px); padding: 25px; 
+      text-align: center; border-bottom: 1px solid #eee; z-index: 100;
     }
     nav a { 
-      color: var(--text-muted); 
-      margin: 0 20px; 
-      text-decoration: none; 
-      font-weight: 400; 
-      text-transform: uppercase; 
-      font-size: 0.75rem; 
-      letter-spacing: 2px;
-      transition: color 0.3s;
+      color: var(--text); margin: 0 25px; text-decoration: none; 
+      font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px;
     }
-    nav a:hover { color: var(--accent); }
 
-    section { padding: 80px 20px; max-width: 1200px; margin: auto; }
+    section { padding: 100px 5%; max-width: 1400px; margin: auto; }
     
-    h2 { 
-      text-transform: uppercase; 
-      letter-spacing: 3px; 
-      font-weight: 300;
-      text-align: center;
-      margin-bottom: 50px;
-      font-size: 1.5rem;
-    }
-
-    /* Refined Grid Layout */
-    .video-grid { 
+    /* Editorial Video Grid */
+    .fashion-grid { 
       display: grid; 
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
-      gap: 40px; 
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+      gap: 50px; 
     }
     
-    .item { position: relative; overflow: hidden; }
-    .category-tag { 
-      font-size: 10px; 
-      letter-spacing: 2px; 
-      text-transform: uppercase; 
-      color: var(--text-muted); 
-      margin-bottom: 15px; 
-      display: block; 
+    .item { position: relative; cursor: pointer; }
+    .item-label { 
+      font-size: 0.7rem; letter-spacing: 3px; 
+      text-transform: uppercase; margin-bottom: 15px; display: block;
+    }
+
+    .visual-box { 
+      height: 600px; background-color: var(--accent);
+      background-size: cover; background-position: center;
+      transition: all 0.6s ease; filter: grayscale(20%);
     }
     
-    .video-placeholder { 
-      height: 500px; 
-      background-color: var(--card-bg);
-      background-size: cover;
-      background-position: center;
-      border-radius: 2px;
-      display: flex;
-      align-items: flex-end;
-      padding: 30px;
-      text-decoration: none;
-      transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      border: 1px solid #222;
-    }
-    
-    .video-placeholder:hover { 
-      border-color: #444;
-      transform: translateY(-5px);
+    .item:hover .visual-box { filter: grayscale(0%); transform: scale(1.01); }
+
+    /* Modern Women's Fashion Unbranded Images */
+    .apparel { background-image: url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1000&auto=format&fit=crop'); }
+    .accessories { background-image: url('https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=1000&auto=format&fit=crop'); }
+    .footwear { background-image: url('https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=80&w=1000&auto=format&fit=crop'); }
+
+    .details-overlay {
+      position: absolute; bottom: 30px; left: 30px;
+      color: white; background: rgba(0,0,0,0.3);
+      padding: 10px 20px; backdrop-filter: blur(4px);
+      font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;
     }
 
-    .placeholder-text {
-      color: #fff;
-      font-weight: 300;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      font-size: 0.8rem;
-      background: rgba(0,0,0,0.5);
-      padding: 10px 20px;
-      backdrop-filter: blur(5px);
+    /* Content Styling */
+    .concept-text { 
+      max-width: 700px; margin: 0 auto; text-align: center; 
     }
-
-    /* Unbranded/Minimal Imagery - No visible logos */
-    .footwear-img { background-image: url('https://images.unsplash.com/photo-1560769629-975ec94e6a86?q=80&w=1000&auto=format&fit=crop'); }
-    .apparel-img { background-image: url('https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=1000&auto=format&fit=crop'); }
-
-    /* Concept Section Styles */
-    .concept-box {
-      text-align: center;
-      background: var(--card-bg);
-      padding: 60px;
-      border: 1px solid #222;
-    }
-    .concept-box p {
-      max-width: 600px;
-      margin: 20px auto;
-      color: var(--text-muted);
-    }
+    .concept-text h2 { font-weight: 300; letter-spacing: 5px; margin-bottom: 40px; }
 
     footer { 
-      border-top: 1px solid #222;
-      color: var(--text-muted); 
-      text-align: center; 
-      padding: 50px 20px; 
-      font-size: 0.7rem; 
-      letter-spacing: 2px;
-      text-transform: uppercase;
+      padding: 80px 20px; text-align: center; 
+      border-top: 1px solid #eee; font-size: 0.7rem; 
+      letter-spacing: 2px; color: var(--muted);
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Silent Unbox Co</h1>
-    <p>Aesthetic • Minimal • Textures</p>
+    <h1>Silent Unbox Co.</h1>
+    <p>The Art of Detail • Women's Fashion Edition</p>
   </header>
 
   <nav>
     <a href="#home">Home</a>
     <a href="#about">Concept</a>
-    <a href="https://youtube.com/@SilentUnboxCo" target="_blank">YouTube</a>
-    <a href="https://instagram.com/silentunboxco" target="_blank">Instagram</a>
+    <a href="https://youtube.com/@SilentUnboxCo">YouTube</a>
+    <a href="https://instagram.com/silentunboxco">Instagram</a>
   </nav>
 
   <section id="home">
-    <h2>Latest Moments</h2>
-    <div class="video-grid">
+    <div class="fashion-grid">
         <div class="item">
-            <span class="category-tag">Footwear</span>
-            <div class="video-placeholder footwear-img">
-              <span class="placeholder-text">View Footwear Detail</span>
+            <span class="item-label">Apparel</span>
+            <div class="visual-box apparel">
+              <div class="details-overlay">Silk & Satin Textures</div>
             </div>
         </div>
         <div class="item">
-            <span class="category-tag">Apparel</span>
-            <div class="video-placeholder apparel-img">
-              <span class="placeholder-text">View Fabric Texture</span>
+            <span class="item-label">Accessories</span>
+            <div class="visual-box accessories">
+              <div class="details-overlay">Leather Craftsmanship</div>
+            </div>
+        </div>
+        <div class="item">
+            <span class="item-label">Footwear</span>
+            <div class="visual-box footwear">
+              <div class="details-overlay">Minimalist Design</div>
             </div>
         </div>
     </div>
   </section>
 
   <section id="about">
-    <div class="concept-box">
-      <h2>The Concept</h2>
-      <p>High-definition, silent unboxing experiences. No voice, no face—just the raw aesthetic of premium apparel, footwear, and accessories.</p>
-      <p style="font-size: 0.8rem; letter-spacing: 1px;">Focus: Fabric Quality • Stitching Details • Unboxing ASMR</p>
+    <div class="concept-text">
+      <h2>The Silent Aesthetic</h2>
+      <p>Focused on the drape of fabric, the glint of hardware, and the ASMR of premium packaging. We remove the noise to highlight the true quality of women's apparel and accessories.</p>
     </div>
   </section>
 
   <footer>
-    <p>© 2026 Silent Unbox Co. All rights reserved.</p>
+    <p>© 2026 SILENT UNBOX CO. ALL RIGHTS RESERVED.</p>
   </footer>
 
 </body>
