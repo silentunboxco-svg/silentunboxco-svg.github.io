@@ -3,156 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Silent Unbox Co. | Women's Fashion & Textures</title>
+  <title>Silent Unbox Co. | Shop the Feed</title>
   <style>
-    :root {
-      --bg: #ffffff;
-      --text: #1a1a1a;
-      --muted: #757575;
-      --accent: #f9f9f9;
-    }
-
-    body { 
-      font-family: 'optima', sans-serif, 'Helvetica Neue', Arial; 
-      margin: 0; background: var(--bg); color: var(--text); 
-      line-height: 1.8;
-    }
-
-    /* Elegant Editorial Header */
-    header { 
-      padding: 120px 20px 60px; 
-      text-align: center;
-      letter-spacing: 0.3em;
-    }
-    header h1 { 
-      font-size: clamp(1.8rem, 5vw, 2.8rem); 
-      font-weight: 300; 
-      text-transform: uppercase; 
-      margin: 0;
-    }
-    header p { 
-      font-size: 0.8rem; 
-      text-transform: uppercase; 
-      color: var(--muted); 
-      margin-top: 20px;
-      letter-spacing: 0.5em;
-    }
-
-    /* Minimal Sticky Navigation */
-    nav { 
-      position: sticky; top: 0; background: rgba(255,255,255,0.9);
-      backdrop-filter: blur(10px); padding: 25px; 
-      text-align: center; border-bottom: 1px solid #eee; z-index: 100;
-    }
-    nav a { 
-      color: var(--text); margin: 0 20px; text-decoration: none; 
-      font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px;
-      transition: opacity 0.3s;
-    }
-    nav a:hover { opacity: 0.5; }
-
-    section { padding: 80px 5%; max-width: 1200px; margin: auto; }
+    :root { --bg: #ffffff; --text: #1a1a1a; --muted: #888; }
+    body { font-family: -apple-system, sans-serif; margin: 0; background: var(--bg); color: var(--text); text-align: center; }
     
-    h2 { 
-      font-weight: 300; text-transform: uppercase; letter-spacing: 4px; 
-      font-size: 1.2rem; margin-bottom: 50px; text-align: center;
-    }
-
-    /* Modern Fashion Grid */
-    .fashion-grid { 
+    /* Header & Branding */
+    header { padding: 60px 20px; border-bottom: 1px solid #f0f0f0; }
+    h1 { font-weight: 300; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 10px; }
+    .bio { font-size: 0.9rem; line-height: 1.6; color: var(--muted); margin-bottom: 20px; }
+    
+    /* The Loop Grid (Looks like Instagram) */
+    .product-grid { 
       display: grid; 
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
-      gap: 40px; 
+      grid-template-columns: repeat(3, 1fr); 
+      gap: 5px; 
+      max-width: 900px; 
+      margin: auto; 
+      padding: 10px;
     }
-    
-    .item { position: relative; overflow: hidden; cursor: pointer; }
-    .item-label { 
-      font-size: 0.65rem; letter-spacing: 3px; 
-      text-transform: uppercase; margin-bottom: 15px; display: block;
-      color: var(--muted);
-    }
+    .product-item { position: relative; aspect-ratio: 1 / 1; overflow: hidden; background: #eee; }
+    .product-item img { width: 100%; height: 100%; object-fit: cover; transition: opacity 0.3s; }
+    .product-item:hover img { opacity: 0.7; }
 
-    .visual-box { 
-      height: 550px; background-color: var(--accent);
-      background-size: cover; background-position: center;
-      transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+    /* Action Button */
+    .shop-btn {
+      position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%);
+      background: white; color: black; padding: 5px 10px; font-size: 0.6rem;
+      text-transform: uppercase; border: 1px solid black; text-decoration: none;
+      opacity: 0; transition: opacity 0.3s;
     }
-    
-    .item:hover .visual-box { transform: scale(1.03); }
+    .product-item:hover .shop-btn { opacity: 1; }
 
-    /* Unbranded Women's Fashion Images */
-    .apparel { background-image: url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1000&auto=format&fit=crop'); }
-    .footwear { background-image: url('https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=1000&auto=format&fit=crop'); }
-    .accessories { background-image: url('https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=1000&auto=format&fit=crop'); }
-
-    .overlay {
-      position: absolute; inset: 0;
-      background: rgba(0,0,0,0.05);
-      display: flex; align-items: center; justify-content: center;
-      opacity: 0; transition: opacity 0.4s;
-    }
-    .item:hover .overlay { opacity: 1; }
-    .overlay span { 
-      color: white; border: 1px solid white; padding: 10px 20px; 
-      text-transform: uppercase; font-size: 0.7rem; letter-spacing: 2px;
-      backdrop-filter: blur(5px);
-    }
-
-    /* Concept Section */
-    .concept { text-align: center; background: var(--accent); padding: 100px 20px; }
-    .concept p { max-width: 600px; margin: 0 auto; color: var(--muted); }
-
-    footer { 
-      padding: 60px 20px; text-align: center; 
-      font-size: 0.65rem; letter-spacing: 3px; color: var(--muted);
-      text-transform: uppercase;
-    }
+    .footer-links { padding: 40px; border-top: 1px solid #f0f0f0; margin-top: 40px; }
+    .social-link { text-decoration: none; color: black; font-weight: bold; font-size: 0.8rem; margin: 0 10px; text-transform: uppercase; }
   </style>
 </head>
 <body>
 
   <header>
     <h1>Silent Unbox Co.</h1>
-    <p>Aesthetic • Minimal • Women's Fashion</p>
+    <div class="bio">
+      Silent product moments ✨<br>
+      Fashion • Beauty • Textures<br>
+      No face • No voice • Just details
+    </div>
   </header>
 
-  <nav>
-    <a href="#home">Collection</a>
-    <a href="#about">The Concept</a>
-    <a href="https://youtube.com/@SilentUnboxCo">YouTube</a>
-    <a href="https://instagram.com/silentunboxco">Instagram</a>
-  </nav>
+  <div class="product-grid">
+    <a href="INSERT_PRODUCT_LINK_1" class="product-item">
+      <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500" alt="Fashion">
+      <div class="shop-btn">Get Product</div>
+    </a>
 
-  <section id="home">
-    <h2>Seasonal Drops</h2>
-    <div class="fashion-grid">
-        <div class="item">
-            <span class="item-label">Apparel</span>
-            <div class="visual-box apparel"></div>
-            <div class="overlay"><span>View Textures</span></div>
-        </div>
-        <div class="item">
-            <span class="item-label">Footwear</span>
-            <div class="visual-box footwear"></div>
-            <div class="overlay"><span>View Details</span></div>
-        </div>
-        <div class="item">
-            <span class="item-label">Accessories</span>
-            <div class="visual-box accessories"></div>
-            <div class="overlay"><span>View Craftsmanship</span></div>
-        </div>
-    </div>
-  </section>
+    <a href="INSERT_PRODUCT_LINK_2" class="product-item">
+      <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500" alt="Shoes">
+      <div class="shop-btn">Get Product</div>
+    </a>
 
-  <section id="about" class="concept">
-    <h2>The Aesthetic</h2>
-    <p>High-definition, silent unboxing focused on the drape of silk, the grain of leather, and the intricate details of women's fashion.</p>
-    <p style="margin-top: 20px; font-size: 0.7rem; letter-spacing: 2px;">No voice. No face. Just the art of the product.</p>
-  </section>
+    <a href="INSERT_PRODUCT_LINK_3" class="product-item">
+      <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500" alt="Bag">
+      <div class="shop-btn">Get Product</div>
+    </a>
+  </div>
 
-  <footer>
-    <p>© 2026 Silent Unbox Co. All rights reserved.</p>
-  </footer>
+  <div class="footer-links">
+    <p>Links below ⬇️</p>
+    <a href="https://youtube.com/@SilentUnboxCo" class="social-link">YouTube</a>
+    <a href="https://instagram.com/silentunboxco" class="social-link">Instagram</a>
+  </div>
 
 </body>
 </html>
