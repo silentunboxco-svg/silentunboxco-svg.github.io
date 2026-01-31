@@ -6,20 +6,21 @@
   <title>Silent Unbox Co - Fashion & Footwear</title>
   <style>
     body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; padding: 0; background: #f7f7f7; color: #333; line-height: 1.6; }
+    
     header { background: #000; color: #fff; padding: 60px 20px; text-align: center; border-bottom: 5px solid #333; }
     header h1 { letter-spacing: 3px; text-transform: uppercase; margin: 0; font-size: 2.5em; }
+    header p { font-size: 1.1em; opacity: 0.8; letter-spacing: 1px; }
+
     nav { background: #222; padding: 15px; text-align: center; }
     nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; text-transform: uppercase; font-size: 0.8em; }
+
     section { padding: 60px 20px; max-width: 1100px; margin: auto; }
     h2 { text-transform: uppercase; letter-spacing: 1px; border-left: 4px solid #000; padding-left: 15px; margin-bottom: 30px; }
     
-    /* Grid Styles */
     .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
     .category-tag { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #888; margin-bottom: 10px; display: block; font-weight: bold; }
+    
     .video-placeholder { 
-        background-color: #e0e0e0;
-        background-size: cover;
-        background-position: center;
         height: 400px; 
         display: flex;
         align-items: center;
@@ -28,15 +29,18 @@
         color: #fff;
         text-shadow: 1px 1px 10px rgba(0,0,0,0.5);
         font-weight: bold;
+        background-size: cover;
+        background-position: center;
         transition: transform 0.3s ease;
+        text-decoration: none;
     }
     .video-placeholder:hover { transform: scale(1.02); }
 
-    /* Visual Content */
+    /* Visual Content Links */
     .footwear-img { background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1000&auto=format&fit=crop'); }
     .apparel-img { background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1000&auto=format&fit=crop'); }
 
-    footer { background: #000; color: white; text-align: center; padding: 30px; margin-top: 40px; }
+    footer { background: #000; color: white; text-align: center; padding: 30px; margin-top: 40px; font-size: 0.9em; }
   </style>
 </head>
 <body>
