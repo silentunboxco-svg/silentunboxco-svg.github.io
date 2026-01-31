@@ -1,68 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Silent Unbox Co. | Shop the Feed</title>
-  <style>
-    :root { --bg: #ffffff; --text: #1a1a1a; --muted: #888; }
-    body { font-family: -apple-system, sans-serif; margin: 0; background: var(--bg); color: var(--text); text-align: center; }
-    
-    /* Header Branding */
-    header { padding: 60px 20px; }
-    h1 { font-weight: 300; letter-spacing: 5px; text-transform: uppercase; margin: 0; }
-    .bio { font-size: 0.85rem; line-height: 1.8; color: var(--muted); margin-top: 25px; }
-    
-    /* The Instagram-Style Grid */
-    .product-grid { 
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; 
-      max-width: 800px; margin: 40px auto; padding: 0 4px;
-    }
-    .product-item { position: relative; aspect-ratio: 1 / 1; overflow: hidden; background: #fafafa; }
-    .product-item img { width: 100%; height: 100%; object-fit: cover; }
-    .shop-tag { 
-      position: absolute; bottom: 8px; right: 8px; background: rgba(255,255,255,0.9); 
-      padding: 4px 8px; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 1px;
-    }
-
-    /* Links Section */
-    .footer-links { padding: 40px 20px; }
-    .social-btn { 
-      display: block; max-width: 320px; margin: 12px auto; padding: 18px; 
-      border: 1px solid #1a1a1a; text-decoration: none; color: #1a1a1a; 
-      font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px;
-    }
-    
-    /* Required Affiliate Disclosure */
-    .disclaimer { padding: 60px 20px 20px; font-size: 0.65rem; color: #999; line-height: 1.6; max-width: 600px; margin: auto; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silent Unbox Co. | Form & Texture</title>
+    <style>
+        body { font-family: 'Inter', sans-serif; text-align: center; margin: 0; padding: 20px; background: #fff; color: #333; }
+        header { margin-bottom: 40px; }
+        h1 { font-size: 1.5rem; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 10px; }
+        .tagline { font-size: 0.8rem; color: #888; letter-spacing: 1px; line-height: 1.6; }
+        
+        /* The Instagram-Style Grid */
+        .product-grid { 
+          display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; 
+          max-width: 800px; margin: 40px auto; padding: 0 4px;
+        }
+        .product-item { position: relative; aspect-ratio: 1 / 1; overflow: hidden; background: #fafafa; border: 1px solid #eee; }
+        .product-item img { width: 100%; height: 100%; object-fit: cover; }
+        .shop-tag { 
+          position: absolute; bottom: 8px; right: 8px; background: rgba(255,255,255,0.9); 
+          padding: 4px 8px; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 1px;
+          text-decoration: none; color: #000; font-weight: bold; border-radius: 2px;
+        }
+        
+        .footer-links { margin-top: 50px; }
+        .btn { display: inline-block; padding: 12px 24px; border: 1px solid #000; text-decoration: none; color: #000; font-size: 0.8rem; letter-spacing: 1px; }
+    </style>
 </head>
 <body>
 
-  <header>
-    <h1>Silent Unbox Co.</h1>
-    <div class="bio">
-      Silent product moments ✨<br>
-      Fashion • Beauty • Textures<br>
-      No face • No voice • Just details
+    <header>
+        <h1>Silent Unbox Co.</h1>
+        <div class="tagline">
+            Silent product moments ✨<br>
+            Fashion • Beauty • Textures<br>
+            No face • No voice • Just details
+        </div>
+    </header>
+
+    <div class="product-grid">
+        <div class="product-item">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500" alt="Apparel">
+            <a href="YOUR_LINK" class="shop-tag">Shop</a>
+        </div>
+
+        <div class="product-item">
+            <img src="https://raw.githubusercontent.com/silentunboxco-svg/silentunboxco-svg.github.io/main/image_bc94de.jpg" alt="Casio Sheen">
+            <a href="PASTE_YOUR_EARNKARO_LINK_HERE" class="shop-tag">Shop</a>
+        </div>
+
+        <div class="product-item">
+            <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500" alt="Footwear">
+            <a href="YOUR_LINK" class="shop-tag">Shop</a>
+        </div>
     </div>
-  </header>
 
-  <div class="product-grid">
-    <a href="#" class="product-item">
-      <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400" alt="Fashion">
-      <div class="shop-tag">Shop</div>
-    </a>
-    <a href="#" class="product-item">
-      <img src="https://images.unsplash.com/photo-1596462502278-27bfad4505ee?w=400" alt="Beauty">
-      <div class="shop-tag">Shop</div>
-    </a>
-    <a href="#" class="product-item">
-      <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=400" alt="Footwear">
-      <div class="shop-tag">Shop</div>
-    </a>
-  </div>
+    <div class="footer-links">
+        <p style="font-size: 0.7rem; color: #999; margin-bottom: 20px;">Links below ⬇️</p>
+        <a href="https://youtube.com/@silentunboxco" class="btn">YOUTUBE CHANNEL</a>
+    </div>
 
-  <div class="footer-links">
-    <p style="font-size: 0.8rem; letter-spacing: 2px; margin-bottom: 25px;">Links below ⬇️</p>
-    <a href="https://youtube.com/@SilentUnboxCo" class="social-btn">YouTube Channel</a>
+</body>
+</html>
