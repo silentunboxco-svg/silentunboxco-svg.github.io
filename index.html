@@ -3,66 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Silent Unbox Co. | Form & Texture</title>
+    <title>Silent Unbox Co. | Curated Fashion & Accessories</title>
     <style>
-        body { font-family: 'Inter', sans-serif; text-align: center; margin: 0; padding: 20px; background: #fff; color: #333; }
+        body { font-family: 'Inter', sans-serif; text-align: center; margin: 0; padding: 20px; background: #fff; color: #333; line-height: 1.6; }
         header { margin-bottom: 20px; }
         h1 { font-size: 1.5rem; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 10px; }
-        .tagline { font-size: 0.8rem; color: #888; letter-spacing: 1px; line-height: 1.6; margin-bottom: 30px;}
+        .tagline { font-size: 0.8rem; color: #888; letter-spacing: 1px; margin-bottom: 30px;}
         
-        /* Main Category Menu */
-        .main-menu { display: flex; justify-content: center; gap: 20px; margin-bottom: 40px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
-        .main-menu a { text-decoration: none; color: #333; font-size: 0.9rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+        nav { display: flex; justify-content: center; gap: 20px; margin-bottom: 40px; border-bottom: 1px solid #eee; padding-bottom: 20px; position: sticky; top: 0; background: #fff; z-index: 100; }
+        nav a { text-decoration: none; color: #333; font-size: 0.75rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
 
-        .category-title { font-size: 1rem; letter-spacing: 2px; text-transform: uppercase; margin-top: 40px; }
+        .category-container { max-width: 1000px; margin: 0 auto 60px auto; }
+        .section-title { font-size: 1.1rem; letter-spacing: 3px; text-transform: uppercase; margin: 40px 0 20px 0; border-left: 4px solid #000; padding-left: 15px; text-align: left; }
 
         .product-grid { 
-          display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; 
-          max-width: 800px; margin: 20px auto; padding: 0 4px;
+          display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; 
         }
-        .product-item { position: relative; aspect-ratio: 1 / 1; overflow: hidden; background: #f4f4f4; border: 1px solid #eee; }
-        .product-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .shop-tag { 
-          position: absolute; bottom: 8px; right: 8px; background: rgba(255,255,255,0.9); 
-          padding: 4px 8px; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 1px;
-          text-decoration: none; color: #000; font-weight: bold; border-radius: 2px;
-        }
+        .product-item { position: relative; aspect-ratio: 1 / 1; background: #f9f9f9; border: 1px solid #eee; overflow: hidden; transition: transform 0.3s ease; }
+        .product-item:hover { transform: scale(1.02); }
+        .product-item img { width: 100%; height: 100%; object-fit: cover; }
         
-        .footer-links { margin-top: 50px; }
-        .btn { display: inline-block; padding: 12px 24px; border: 1px solid #000; text-decoration: none; color: #000; font-size: 0.8rem; letter-spacing: 1px; }
-        .disclosure { font-size: 0.65rem; color: #aaa; max-width: 600px; margin: 40px auto; line-height: 1.4; border-top: 1px solid #eee; padding-top: 20px; }
+        .shop-btn { 
+          position: absolute; bottom: 10px; right: 10px; background: #fff; 
+          padding: 6px 12px; font-size: 0.6rem; font-weight: bold; text-decoration: none; color: #000; border: 1px solid #000;
+          box-shadow: 2px 2px 0px #000;
+        }
+
+        .about-section { max-width: 700px; margin: 80px auto; text-align: left; font-size: 0.85rem; color: #666; border: 1px solid #eee; padding: 30px; background: #fafafa; }
+        footer { margin-top: 80px; padding: 40px 20px; border-top: 1px solid #eee; font-size: 0.7rem; color: #aaa; }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Silent Unbox Co.</h1>
-        <div class="tagline">Silent product moments ✨</div>
+        <h1>SILENT UNBOX CO.</h1>
+        <div class="tagline">The Art of Form, Fashion & Texture ✨</div>
     </header>
 
-    <nav class="main-menu">
+    <nav>
         <a href="#accessories">Accessories</a>
         <a href="#apparel">Apparel</a>
         <a href="#footwear">Footwear</a>
+        <a href="#about">About</a>
     </nav>
 
-    <h2 id="accessories" class="category-title">Accessories</h2>
-    <div class="product-grid">
-        <div class="product-item">
-            <img src="image_bc94de.JPG" alt="Casio Sheen">
-            <a href="PASTE_YOUR_LINK_HERE" class="shop-tag">Shop</a>
+    <div class="category-container">
+        <h2 id="accessories" class="section-title">Accessories</h2>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500" alt="Watch">
+                <a href="YOUR_LINK_HERE" class="shop-btn">SHOP NOW</a>
+            </div>
+            <div class="product-item">
+                <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500" alt="Bag">
+                <a href="YOUR_LINK_HERE" class="shop-btn">SHOP NOW</a>
+            </div>
+            <div class="product-item">
+                <img src="https://images.unsplash.com/photo-1576053139778-7e32f2ae3cfd?w=500" alt="Glasses">
+                <a href="YOUR_LINK_HERE" class="shop-btn">SHOP NOW</a>
+            </div>
         </div>
-        <div class="product-item"><div style="padding-top:45%; color:#ccc; font-size:0.6rem;">Coming Soon</div></div>
-        <div class="product-item"><div style="padding-top:45%; color:#ccc; font-size:0.6rem;">Coming Soon</div></div>
+
+        <h2 id="apparel" class="section-title">Apparel</h2>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500" alt="Tshirt">
+                <a href="YOUR_LINK_HERE" class="shop-btn">SHOP NOW</a>
+            </div>
+            <div class="product-item">
+                <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=500" alt="Jacket">
+                <a href="YOUR_LINK_HERE" class="shop-btn">SHOP NOW</a>
+            </div>
+            <div class="product-item">
+                <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500" alt="Fashion">
+                <a href="YOUR_LINK_HERE" class="shop-btn">SHOP NOW</a>
+            </div>
+        </div>
+
+        <h2 id="footwear" class="section-title">Footwear</h2>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500" alt="Sneakers">
+                <a href="YOUR_LINK_HERE" class="shop-btn">SHOP NOW</a>
+            </div>
+            <div class="product-item">
+                <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500" alt="Heels">
+                <a href="YOUR_LINK_HERE" class="shop-btn">SHOP NOW</a>
+            </div>
+            <div class="product-item">
+                <img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=500" alt="Boots">
+                <a href="YOUR_LINK_HERE" class="shop-btn">SHOP NOW</a>
+            </div>
+        </div>
     </div>
 
-    <div class="footer-links">
-        <a href="https://youtube.com/@silentunboxco" class="btn">YOUTUBE CHANNEL</a>
+    <div id="about" class="about-section">
+        <h3 style="color:#000; text-transform: uppercase; font-size: 0.9rem;">About Silent Unbox</h3>
+        <p>Silent Unbox Co. focuses on the visual and tactile details of modern lifestyle products. Through our digital curation and silent unboxing experiences, we help enthusiasts discover the best in fashion, footwear, and accessories.</p>
+        <p><strong>Business Inquiries:</strong> silentunboxco@gmail.com</p>
     </div>
 
-    <div class="disclosure">
-        “As an Amazon Associate, I earn from qualifying purchases.”
-    </div>
+    <footer>
+        <p>“As an Amazon Associate, I earn from qualifying purchases.”</p>
+        <p>&copy; 2026 Silent Unbox Co. | Minimalist Product Studies</p>
+    </footer>
 
 </body>
 </html>
