@@ -13,14 +13,15 @@
         /* Main Category Menu */
         .main-menu { display: flex; justify-content: center; gap: 20px; margin-bottom: 40px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
         .main-menu a { text-decoration: none; color: #333; font-size: 0.9rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
-        .main-menu a:hover { color: #888; }
 
-        /* The Instagram-Style Grid */
+        .category-title { font-size: 1rem; letter-spacing: 2px; text-transform: uppercase; margin-top: 40px; }
+
         .product-grid { 
           display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; 
-          max-width: 800px; margin: 40px auto; padding: 0 4px;
+          max-width: 800px; margin: 20px auto; padding: 0 4px;
         }
-        .product-item { position: relative; aspect-ratio: 1 / 1; overflow: hidden; background: #f9f9f9; border: 1px solid #eee; }
+        /* Added light grey background so a missing image doesn't look like a 'broken' icon */
+        .product-item { position: relative; aspect-ratio: 1 / 1; overflow: hidden; background: #f4f4f4; border: 1px solid #eee; }
         .product-item img { width: 100%; height: 100%; object-fit: cover; }
         .shop-tag { 
           position: absolute; bottom: 8px; right: 8px; background: rgba(255,255,255,0.9); 
@@ -37,35 +38,23 @@
 
     <header>
         <h1>Silent Unbox Co.</h1>
-        <div class="tagline">
-            Silent product moments ✨<br>
-            No face • No voice • Just details
-        </div>
+        <div class="tagline">Silent product moments ✨</div>
     </header>
 
     <nav class="main-menu">
-        <a href="#apparel">Apparel</a>
         <a href="#accessories">Accessories</a>
-        <a href="#footwear">Footwear</a>
+        <a href="#">Apparel</a>
+        <a href="#">Footwear</a>
     </nav>
 
-    <h2 id="accessories" style="font-size: 1rem; letter-spacing: 2px; text-transform: uppercase;">Accessories</h2>
-    
+    <h2 id="accessories" class="category-title">Accessories</h2>
     <div class="product-grid">
         <div class="product-item">
-            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500" alt="Apparel">
-            <a href="#" class="shop-tag">Coming Soon</a>
-        </div>
-
-        <div class="product-item">
-            <img src="./image_bc94de.jpg" alt="Casio Sheen Detail">
+            <img src="image_bc94de.jpg" alt="Casio Sheen">
             <a href="PASTE_YOUR_LINK_HERE" class="shop-tag">Shop</a>
         </div>
-
-        <div class="product-item">
-            <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500" alt="Footwear">
-            <a href="#" class="shop-tag">Coming Soon</a>
-        </div>
+        <div class="product-item"><div style="padding-top:45%; color:#ccc; font-size:0.6rem;">Coming Soon</div></div>
+        <div class="product-item"><div style="padding-top:45%; color:#ccc; font-size:0.6rem;">Coming Soon</div></div>
     </div>
 
     <div class="footer-links">
