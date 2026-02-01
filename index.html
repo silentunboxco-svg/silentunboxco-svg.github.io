@@ -20,9 +20,8 @@
           display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; 
           max-width: 800px; margin: 20px auto; padding: 0 4px;
         }
-        /* Added light grey background so a missing image doesn't look like a 'broken' icon */
         .product-item { position: relative; aspect-ratio: 1 / 1; overflow: hidden; background: #f4f4f4; border: 1px solid #eee; }
-        .product-item img { width: 100%; height: 100%; object-fit: cover; }
+        .product-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
         .shop-tag { 
           position: absolute; bottom: 8px; right: 8px; background: rgba(255,255,255,0.9); 
           padding: 4px 8px; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 1px;
@@ -43,14 +42,14 @@
 
     <nav class="main-menu">
         <a href="#accessories">Accessories</a>
-        <a href="#">Apparel</a>
-        <a href="#">Footwear</a>
+        <a href="#apparel">Apparel</a>
+        <a href="#footwear">Footwear</a>
     </nav>
 
     <h2 id="accessories" class="category-title">Accessories</h2>
     <div class="product-grid">
         <div class="product-item">
-            <img src="image_bc94de.jpg" alt="Casio Sheen">
+            <img src="image_bc94de.JPG" alt="Casio Sheen">
             <a href="PASTE_YOUR_LINK_HERE" class="shop-tag">Shop</a>
         </div>
         <div class="product-item"><div style="padding-top:45%; color:#ccc; font-size:0.6rem;">Coming Soon</div></div>
